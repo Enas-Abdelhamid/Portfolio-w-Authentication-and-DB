@@ -1,0 +1,45 @@
+{
+  "name": "comp229win22enas301234410",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "engines": {
+    "node": "^17.4.0",
+    "npm": "^8.3.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.0.0",
+    "@types/passport": "^1.0.7",
+    "bootstrap": "^5.1.3",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-session": "^1.17.2",
+    "http-errors": "~1.6.3",
+    "jquery": "^3.6.0",
+    "mongoose": "^6.2.3",
+    "morgan": "~1.9.1",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0",
+    "popper.js": "^1.16.1",
+    "save": "^2.4.0"
+  },
+  "description": "portfolio of enas radwan",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enas-Abdelhamid/Enas_Radwan_Portfolio.git"
+  },
+  "author": "Enas Abdelhamid 301234410",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Enas-Abdelhamid/Enas_Radwan_Portfolio/issues"
+  },
+  "homepage": "https://github.com/Enas-Abdelhamid/Enas_Radwan_Portfolio#readme"
+}
