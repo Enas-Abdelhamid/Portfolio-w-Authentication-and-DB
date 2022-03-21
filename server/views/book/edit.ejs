@@ -14,112 +14,99 @@
 
     <!-- Main Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-    <a class="navbar-brand" href="/"> Enas Radwan</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
+  <a class="navbar-brand" href="/"> Immedi - Aid</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-        <% if (title == "Home"){ %>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+
+      <% if (title == "Home"){ %>
+      <li class="nav-item active">
+      <% } else  { %>
+      <li class="nav-item">
+      <% } %>
+        <a class="nav-link" href="/home"><i class="fas fa-lg fa-laptop-house"></i> Home </a>
+      </li>
+
+      <% if (title == "About") { %>
+      <li class="nav-item active">
+      <% } else  { %>
+      <li class="nav-item">
+      <% } %>
+        <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i> About </a>
+      </li>
+
+      <% if (title == "Books") { %>
         <li class="nav-item active">
         <% } else  { %>
         <li class="nav-item">
         <% } %>
-          <a class="nav-link" href="/home"><i class="fas fa-lg fa-laptop-house"></i> Home </a>
+          <a class="nav-link" href="/book-list"><i class="fas fa-book"></i> Aid Providers </a>
         </li>
 
-        <% if (title == "About") { %>
-        <li class="nav-item active">
-        <% } else  { %>
-        <li class="nav-item">
+     
+
+      <% if (title == "Contact") { %>
+      <li class="nav-item active">
+      <% } else  { %>
+      <li class="nav-item">
+      <% } %>
+        <a class="nav-link" href="/contact"><i class="fas fa-mobile-alt"></i> Contact Us </a>
+      </li>
+
+        
+         
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+          <li class="nav-item"><a href="/logout" class="nav-link">
+            <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+        <% } else { %>
+          <li class="nav-item"><a href="/login" class="nav-link">
+            <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
         <% } %>
-          <a class="nav-link" href="/about"><i class="fas fa-info-circle"></i> About </a>
-        </li>
 
-        <% if (title == "Products") { %>
-        <li class="nav-item active">
-        <% } else  { %>
-        <li class="nav-item">
-        <% } %>
-          <a class="nav-link" href="/projects"><i class="fab fa-elementor"></i> Projects </a>
-        </li>
 
-        <% if (title == "Services") { %>
-        <li class="nav-item active">
-        <% } else  { %>
-        <li class="nav-item">
-        <% } %>
-          <a class="nav-link" href="/services"><i class="fas fa-cogs"></i> Services </a>
-        </li>
 
-        <% if (title == "Contact") { %>
-        <li class="nav-item active">
-        <% } else  { %>
-        <li class="nav-item">
-        <% } %>
-          <a class="nav-link" href="/contact"><i class="fas fa-mobile-alt"></i> Contact Us </a>
-        </li>
-
-        <% if (title == "Books") { %>
-          <li class="nav-item active">
-          <% } else  { %>
-          <li class="nav-item">
-          <% } %>
-            <a class="nav-link" href="/book-list"><i class="fas fa-book"></i> Business Contacts </a>
-          </li>
-  
-           
-          <% if(typeof displayName == 'string' && displayName) { %>
-            <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
-            <li class="nav-item"><a href="/logout" class="nav-link">
-              <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
-          <% } else { %>
-            <li class="nav-item"><a href="/login" class="nav-link">
-              <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
-          <% } %>
-  
-  
-
-    </div>
-  </nav>
-  <img src="/Assets/images/erLogo.jpg" alt="my logo">
+  </div>
+</nav>
+<img src="/Assets/images/immediaid.jpg" alt="web app logo">
 
 <!-- Content for the Add page -->
 <div class="container">
     <div class="row">
         <div class="offset-md-3 col-md-6">
-            <h1><%= title %></h1>
+            <h1>Edit Aid Provider Data</h1>
 
             <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="nameField">Contact Name</label>
+                    <label for="nameField">Aid Provider Name</label>
                     <input type="text" class="form-control"
                     id="nameField"
-                    placeholder="Enter the Contact Name"
-                    name="contactname" 
-                    value="<%= book.contactname %>"
+                    placeholder="Enter the Aid Provider Name"
+                    name="providerName" 
+                    value="<%= book.providerName %>"
                     required>
                 </div>
 
                 <div class="form-group">
-                    <label for="numberField">Contact Number</label>
+                    <label for="typeField">Aid Type</label>
                     <input type="text" class="form-control"
-                    id="numberField"
-                    placeholder="Enter the Contact Number"
-                    name="contactnumber" 
-                    value="<%= book.contactnumber %>"
+                    id="typeField"
+                    placeholder="Enter the Aid Type"
+                    name="providerAid" 
+                    value="<%= book.providerAid %>"
                     required>
                 </div>
 
                 <div class="form-group">
-                    <label for="emailField">Contact Email Address</label>
+                    <label for="locationField">Provider Location</label>
                     <input type="text" class="form-control"
-                    id="emailField"
-                    placeholder="Enter the E-mail Address"
-                    name="emailaddress" 
-                    value="<%= book.emailaddress %>"
+                    id="locationField"
+                    placeholder="Enter your most recent location"
+                    name="providerLocation" 
+                    value="<%= book.providerLocation %>"
                     required>
                 </div>
 
@@ -146,7 +133,7 @@
       <h6 class="display-9 navbar-text">&copy; Copyrights Reserved, 2022.</h6>
     </nav>
   </footer>
-
+  <img src="/Assets/images/inCinque.png" alt="team logo">
 <!-- Script Section -->
 <script src="/jquery/dist/jquery.min.js"></script>
 <script src="/bootstrap/dist/js/bootstrap.min.js"></script>

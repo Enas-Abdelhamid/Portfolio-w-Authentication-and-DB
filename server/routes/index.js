@@ -16,8 +16,6 @@ router.get('/about', indexController.displayAboutPage);
 /* GET Products page. */
 router.get('/projects', indexController.displayProductsPage);
 
-/* GET Services page. */
-router.get('/services', indexController.displayServicesPage);
 
 /* GET Contact Us page. */
 router.get('/contact', indexController.displayContactPage);

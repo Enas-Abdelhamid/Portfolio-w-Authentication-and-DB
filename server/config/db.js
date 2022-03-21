@@ -2,7 +2,7 @@
 module.exports = 
 {
     //"URI" : "mongodb://127.0.0.1/business_list",
-   "URI" : "mongodb+srv://Enas:N7pEhm8vNRF5jEo9@clusterclass04.w35w9.mongodb.net/business_list?retryWrites=true&w=majority",
+   "URI" : "mongodb+srv://Enas:N7pEhm8vNRF5jEo9@clusterclass04.w35w9.mongodb.net/immedi_aid?retryWrites=true&w=majority",
    "Secret" : 'SomeSecret'
 }
 
